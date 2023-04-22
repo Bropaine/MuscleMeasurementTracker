@@ -34,15 +34,17 @@ $(document).ready(function () {
         localStorage.setItem("measurements", JSON.stringify(measurements));
     }
 
-    window.addEventListener('orientationchange', function() {
-        if (window.matchMedia("(orientation: portrait)").matches && window.innerWidth < 769) {
+    function checkOrientation() {
+        if (window.innerHeight > window.innerWidth && window.innerWidth < 769) {
           document.getElementById('landscape-warning').style.display = 'flex';
         } else {
           document.getElementById('landscape-warning').style.display = 'none';
           location.reload();
         }
-      });
+      }
       
+      window.addEventListener('orientationchange', checkOrientation);
+      window.addEventListener('resize', checkOrientation);
       
 
     function getRadialChartData() {
