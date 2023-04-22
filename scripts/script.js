@@ -35,13 +35,14 @@ $(document).ready(function () {
     }
 
     window.addEventListener('orientationchange', function() {
-        if (window.innerHeight > window.innerWidth && window.innerWidth < 769) {
+        if (window.matchMedia("(orientation: portrait)").matches && window.innerWidth < 769) {
           document.getElementById('landscape-warning').style.display = 'flex';
         } else {
           document.getElementById('landscape-warning').style.display = 'none';
           location.reload();
         }
       });
+      
       
 
     function getRadialChartData() {
