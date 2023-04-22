@@ -1,0 +1,429 @@
+.nested-history-table td {
+    padding-right: 100px !important;
+
+}
+
+#measurement-data-table details td.title {
+
+    padding-left: 50px;
+    width: 200px;
+}
+
+#measurement-data-table details td.date {
+
+    padding-right: 1000px;
+    width: 200px;
+}
+
+#measurement-data-table details td.measurement {
+
+    padding-left: 20px;
+    width: 150px;
+}
+
+#measurement-data-table details td.diff {
+
+    padding-right: 20px;
+    width: 300px;
+}
+
+#measurement-data-table details td.inc_diff {
+
+    padding-left: 20px;
+}
+
+/* Add margin to the top of the page */
+/* Set a default font family and size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    background-image: linear-gradient(to bottom, #f7f7f7, #c7bdbd);
+}
+
+/* Make the title stand out */
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Reduce the margin above the title */
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+/* Add a subtle box shadow to the container */
+.container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Center the image and chart */
+.d-flex.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Add a border radius to the modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Style the input fields */
+.form-control {
+    border-radius: 5px;
+}
+
+/* Make the button stand out */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+/* Style the table headers */
+.table thead th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Add a background color and hover effect to table rows */
+.table tbody tr {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: #dcdcdc;
+}
+
+/* Style the difference text */
+span {
+    font-weight: bold;
+}
+
+span.red {
+    color: red;
+}
+
+/* Set a max width for the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Add a box shadow to the image and chart */
+#muscle-image,
+.chart-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Style the area on hover */
+.area-hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.area-hover:hover {
+    opacity: 1;
+}
+
+/* Style the selected area */
+.area-selected {
+    opacity: 1 !important;
+}
+
+/* Add a background color to the selected table row */
+.table tbody tr.selected {
+    background-color: #007bff !important;
+    color: #fff;
+}
+
+/* Add a box shadow and hover effect to the Add Measurement button */
+.btn-primary {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a subtle box shadow to the details element */
+details {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Style the summary element */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add a box shadow to the line chart */
+#line-chart {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#radial-chart {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Style the x-axis title */
+.scales-x-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Style the y-axis title */
+.scales-y-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Style the tooltip */
+.chartjs-tooltip {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the tooltip arrow */
+.chartjs-tooltip:before,
+.chartjs-tooltip:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.chartjs-tooltip:before {
+    border-width: 6px;
+    margin-top: -6px;
+    border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.chartjs-tooltip:after {
+    border-width: 5px;
+    margin-top: -5px;
+    border-top-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+table td {
+    border: 1px solid #dee2e6;
+}
+
+/* Style the main row */
+.main-row {
+    cursor: pointer;
+}
+
+.main-row:hover {
+    background-color: #f5f5f5;
+}
+
+/* Style the nested history table */
+.nested-history-table {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.nested-history-table th {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.nested-history-table td {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/* Style the chart container */
+.chart-container {
+    margin-top: 30px;
+    height: 500px;
+}
+
+/* Style the modal */
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    justify-content: center;
+}
+
+/* Style the image */
+#muscle-image {
+    max-width: 100%;
+}
+
+/* Style the area on hover */
+.area-hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.area-hover:hover {
+    opacity: 0.8;
+}
+
+/* Style the difference text */
+span {
+    font-weight: bold;
+}
+
+span.red {
+    color: red;
+}
+
+
+/* Add a box shadow to the image and chart */
+#muscle-image,
+.chart-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Style the selected area */
+.area-selected {
+    opacity: 1 !important;
+}
+
+/* Add a background color to the selected table row */
+.table tbody tr.selected {
+    background-color: #007bff !important;
+    color: #fff;
+}
+
+/* Add a box shadow and hover effect to the Add Measurement button */
+.btn-primary {
+    box-shadow: 0;
+}
+
+/* Style the close button on the modal */
+.close {
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+/* Add a border radius to the table cells in the history table */
+.nested-history-table td {
+    border-radius: 5px;
+}
+
+/* Add a border radius to the progress bar */
+.progress {
+    border-radius: 10px;
+}
+
+/* Style the progress bar label */
+.progress-label {
+    font-weight: bold;
+}
+
+/* Add a background color to the input field when it is focused */
+.form-control:focus {
+    background-color: #fff;
+}
+
+/* Add a box shadow to the form */
+.form-group {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Style the measurement form title */
+.measurement-form-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Add a background color to the submit button */
+.btn-submit {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #0069d9;
+}
+
+.chart-container {
+    height: 500px;
+    overflow: auto;
+}
+
+
+/* Style buttons on hover */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+    background-color: #007bff;
+    color: #fff;
+}

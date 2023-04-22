@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Measurements</title>
+    <!-- Add Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+
+    <!-- Add image map library -->
+    <script src="scripts/jquery.maphilight.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Muscle Measurements</h1>
+        <div class="mt-4 text-center">
+            <!-- Wrap the image in a container with Bootstrap classes -->
+            <div class="container d-flex justify-content-center">
+                <img src="human_skeletal_muscular_system.jfif" alt="Human Skeletal-Muscular System" usemap="#muscle-map"
+                    class="img-fluid" id="muscle-image">
+            </div>
+
+            <div class="container">
+                <h2>Muscle Measurement Data</h2>
+                <table class="table table-striped" id="measurement-data-table">
+                    <thead>
+                        <tr>
+                            <th>Muscle Group</th>
+                            <th>Date</th>
+                            <th>Measurement</th>
+                            <th>Overall Difference</th>
+                            <th>Incremental Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="line-chart"></canvas>
+                    <canvas id="radial-chart"></canvas>
+                </div>
+            </div>
+
+            <map name="muscle-map">
+                <!-- Define clickable areas for each muscle group -->
+                <area shape="rect" coords="343,278,402,373" href="#" alt="Left Bicep" data-muscle="Left Bicep">
+                <area shape="rect" coords="138,275,75,373" href="#" alt="Right Bicep" data-muscle="Right Bicep">
+                <area shape="rect" coords="146,329,332,438" href="#" alt="Abdomen" data-muscle="Abdomen">
+                <area shape="rect" coords="144,191,337,316" href="#" alt="Chest" data-muscle="Chest">
+                <area shape="rect" coords="246,539,342,675" href="#" alt="Left Quad" data-muscle="Left Quad">
+                <area shape="rect" coords="139,539,233,674" href="#" alt="Right Quad" data-muscle="Right Quad">
+                <area shape="rect" coords="251,761,318,898" href="#" alt="Left Calf" data-muscle="Left Calf">
+                <area shape="rect" coords="158,896,230,758" href="#" alt="Right Calf" data-muscle="Right Calf">
+            </map>
+
+        </div>
+        <!-- Add Modal for data input -->
+        <div class="modal" tabindex="-1" role="dialog" id="measurement-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Enter Measurement</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="muscle-measurement-form">
+                            <input type="hidden" id="selected-muscle">
+                            <div class="form-group">
+                                <label for="measurement-date">Date:</label>
+                                <input type="date" class="form-control" id="measurement-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="measurement-value">Measurement (in inches):</label>
+                                <input type="number" step="0.01" class="form-control" id="measurement-value" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Measurement</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
