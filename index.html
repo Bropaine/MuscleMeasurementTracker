@@ -3,7 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1, viewport-fit=cover, orientation=landscape">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1, viewport-fit=cover">
+    <style>
+    @media screen and (orientation:portrait) {
+        body {
+            transform: rotate(90deg);
+            transform-origin: left top;
+            width: 100vh;
+            overflow-x: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
+    </style>
+    
 
     <title>Muscle Measurements</title>
     <!-- Add Bootstrap CSS and JS -->
@@ -29,7 +43,11 @@
                 <img src="human_skeletal_muscular_system.jfif" alt="Human Skeletal-Muscular System" usemap="#muscle-map"
                     class="img-fluid" id="muscle-image" ontouchstart="">
             </div>
-
+            <div id="landscape-warning">
+                <p>Please rotate your device to landscape mode to view this page.</p>
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              
             <div class="container">
                 <h2>Muscle Measurement Data</h2>
                 <table class="table table-striped" id="measurement-data-table">

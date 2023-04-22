@@ -429,3 +429,34 @@ span.red {
     background-color: #007bff;
     color: #fff;
 }
+#landscape-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+  }
+  
+  #landscape-warning p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40%;
+  }
+  
+  #landscape-warning i {
+    display: block;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    #landscape-warning {
+      display: block;
+    }
+  }
+  
