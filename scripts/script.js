@@ -34,17 +34,14 @@ $(document).ready(function () {
         localStorage.setItem("measurements", JSON.stringify(measurements));
     }
 
-    // Check if the device is in landscape mode
-function isLandscape() {
-    return window.innerWidth > window.innerHeight;
-  }
-  
-  // Show the warning message if the device is in portrait mode
-  if (!isLandscape()) {
-    var warning = document.getElementById("landscape-warning");
-    warning.style.display = "block";
-  }
-  
+    window.addEventListener('orientationchange', function() {
+        if (window.innerHeight > window.innerWidth && window.innerWidth < 769) {
+          document.getElementById('landscape-warning').style.display = 'flex';
+        } else {
+          document.getElementById('landscape-warning').style.display = 'none';
+        }
+      });
+      
 
     function getRadialChartData() {
         const muscleGroups = Object.keys(measurements);
