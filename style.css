@@ -454,14 +454,14 @@ span.red {
     margin-top: 10%;
   }
   
-  @media only screen and (orientation: portrait) {
+  @media  screen and (orientation: portrait) {
     /* Add your portrait styles here */
     #landscape-warning {
       display: block;
     }
   }
   
-  @media only screen and (orientation: landscape) {
+  @media  screen and (orientation: landscape) {
     /* Add your landscape styles here */
     #landscape-warning {
       display: none;
