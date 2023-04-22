@@ -34,6 +34,18 @@ $(document).ready(function () {
         localStorage.setItem("measurements", JSON.stringify(measurements));
     }
 
+    // Check if the device is in landscape mode
+function isLandscape() {
+    return window.innerWidth > window.innerHeight;
+  }
+  
+  // Show the warning message if the device is in portrait mode
+  if (!isLandscape()) {
+    var warning = document.getElementById("landscape-warning");
+    warning.style.display = "block";
+  }
+  
+
     function getRadialChartData() {
         const muscleGroups = Object.keys(measurements);
         const values = muscleGroups.map((muscle) => {

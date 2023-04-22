@@ -440,29 +440,26 @@ span.red {
     z-index: 9999;
   }
   
+  #landscape-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
   #landscape-warning p {
-    font-size: 20px;
+    color: #fff;
+    font-size: 24px;
     font-weight: bold;
-    text-align: center;
-    margin-top: 40%;
   }
   
-  #landscape-warning i {
-    display: block;
-    font-size: 60px;
-    text-align: center;
-    margin-top: 10%;
-  }
-  
-  @media  screen and (orientation: portrait) {
-    /* Add your portrait styles here */
-    #landscape-warning {
-      display: block;
-    }
-  }
-  
-  @media  screen and (orientation: landscape) {
-    /* Add your landscape styles here */
+  @media only screen and (orientation: landscape) {
     #landscape-warning {
       display: none;
     }
