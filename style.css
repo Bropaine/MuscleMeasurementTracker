@@ -454,9 +454,17 @@ span.red {
     margin-top: 10%;
   }
   
-  @media screen and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (orientation: portrait) {
+    /* Add your portrait styles here */
     #landscape-warning {
       display: block;
+    }
+  }
+  
+  @media only screen and (orientation: landscape) {
+    /* Add your landscape styles here */
+    #landscape-warning {
+      display: none;
     }
   }
   
