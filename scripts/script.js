@@ -26,18 +26,21 @@ $(document).ready(function () {
     });
 
     let measurements = JSON.parse(localStorage.getItem("measurements")) || {};
+
+    updateTable();
     renderRadialChart();
 
     function saveMeasurements() {
         localStorage.setItem("measurements", JSON.stringify(measurements));
     }
 
-    function getRadialChartData(muscleData) {
+    function getRadialChartData() {
         const muscleGroups = Object.keys(measurements);
         const values = muscleGroups.map((muscle) => {
             const mostRecentEntry = measurements[muscle][measurements[muscle].length - 1];
-            return mostRecentEntry.value;
-        });
+            return [mostRecentEntry.value];
+            
+        }).flat();
         return {
             labels: muscleGroups,
             datasets: [{
@@ -90,8 +93,12 @@ $(document).ready(function () {
 
 
     function getLineChartData(muscleData) {
-        const labels = muscleData.map(entry => entry.date);
-        const values = muscleData.map(entry => entry.value);
+        let labels = muscleData.map(entry => entry.date);
+        let values = muscleData.map(entry => entry.value);
+        if (muscleData.length === 1) {
+            values = [muscleData[0].value, muscleData[0].value];
+            labels = [muscleData[0].date,  muscleData[0].date];
+        }
         return {
             labels,
             datasets: [{
