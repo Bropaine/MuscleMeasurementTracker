@@ -39,7 +39,6 @@ $(document).ready(function () {
           document.getElementById('landscape-warning').style.display = 'flex';
         } else {
           document.getElementById('landscape-warning').style.display = 'none';
-          location.reload();
         }
       }
       
