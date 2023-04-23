@@ -452,5 +452,18 @@ span.red {
     }
   }
   
+  /* Hide the div on landscape mode on mobile devices */
+@media screen and (max-device-width: 767px) and (orientation: landscape) {
+    #landscape-warning {
+      display: none;
+    }
+  }
+  
+  /* Hide the div on desktop devices */
+  @media screen and (min-device-width: 768px) {
+    #landscape-warning {
+      display: none;
+    }
+  }
   
   
