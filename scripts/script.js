@@ -88,7 +88,7 @@ $(document).ready(function () {
             scales: {
                 r: {
                     beginAtZero: true,
-                    suggestedMax: 15,
+                    suggestedMax: 8,
                     suggestedMin: 0
                 }
             }
