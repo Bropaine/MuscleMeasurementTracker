@@ -49,8 +49,9 @@ $(document).ready(function () {
     function getRadialChartData() {
         const muscleGroups = Object.keys(measurements);
         const values = muscleGroups.map((muscle) => {
+            let muscleData = measurements[muscle];
             const mostRecentEntry = measurements[muscle][measurements[muscle].length - 1];
-            return [mostRecentEntry.value];
+            return [(mostRecentEntry.value - muscleData[0].value).toFixed(2)];
             
         }).flat();
         return {
@@ -195,7 +196,7 @@ $(document).ready(function () {
             headerCells.forEach(headerCell => headerCell.textContent = "");
             historyTable.appendChild(headers);
 
-            muscleData.sort((a, b) => new Date(b.date) - new Date(a.date));
+            muscleData.sort((a, b) => new Date(a.date) - new Date(b.date));
 
             for (let i = 0; i < muscleData.length - 1; i++) {
                 let historyRow = document.createElement('tr');
